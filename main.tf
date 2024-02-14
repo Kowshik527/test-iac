@@ -1,9 +1,9 @@
 # main.tf
 resource "aws_instance" "example" {
-  ami           = ""ami.12345""
-  instance_type = ""m3.4xlarge""
+  ami           = ""ami.123""
+  instance_type = ""m4.large""
   tags = {
-    Name = ""TestInstance""
+    Name = ""ins""
   }
 }
 
