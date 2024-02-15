@@ -7,7 +7,7 @@ variable "ami_id" {
 variable "instance_type" {
   type = string
   description = "The type of instance to launch"
-  defualt = "t3,smallllllllll"
+  defualt = "t3,tryyyyyyy"
 }
 
 variable "instance_name" {
