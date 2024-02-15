@@ -12,7 +12,7 @@ app.use(cors());
 const username = 'Kowshik527';
 const repository = 'test-iac';
 const variablesFilePath = 'variables.tf'; // Change file path to variables.tf
-const accessToken = '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';
+const accessToken = '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';
 
 const baseUrl = 'https://api.github.com';
 const url = `${baseUrl}/repos/${username}/${repository}/contents/${variablesFilePath}`;
@@ -34,9 +34,9 @@ app.post('/updateVariablesTf', (req, res) => {
             return;
         }
 
-        let updatedContent = data.replace('${var.ami_id}', `${amiId}`);
-        updatedContent = updatedContent.replace('${var.instance_type}', `${instanceType}`);
-        updatedContent = updatedContent.replace('${var.instance_name}', `${instanceName}`);
+        let updatedContent = data.replace('${amiId}', `${amiId}`);
+        updatedContent = updatedContent.replace('${instanceType}', `${instanceType}`);
+        updatedContent = updatedContent.replace('${instanceName}', `${instanceName}`);
 
         const content = Buffer.from(updatedContent).toString('base64');
 
