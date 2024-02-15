@@ -12,7 +12,7 @@ app.use(cors());
 const username = 'Kowshik527';
 const repository = 'test-iac';
 const variablesFilePath = 'variables.tf'; // Change file path to variables.tf
-const accessToken = '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';
+const accessToken = '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';
 
 const baseUrl = 'https://api.github.com';
 const url = `${baseUrl}/repos/${username}/${repository}/contents/${variablesFilePath}`;
