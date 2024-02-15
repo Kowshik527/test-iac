@@ -1,12 +1,11 @@
-# main.tf
-resource "aws_instance" "example" {
-  ami           = "${var.ami_id}"
-  instance_type = "${var.instance_type}"
-  tags = {
-    Name = "${var.instance_name}"
-  }
+provider "aws" {
+  region = "us-east-1"
 }
 
-variable "ami_id" {}
-variable "instance_type" {}
-variable "instance_name" {}
+resource "aws_instance" "example" {
+  ami           = var.ami_id
+  instance_type = var.instance_type
+  tags = {
+    Name = var.instance_name
+  }
+}
